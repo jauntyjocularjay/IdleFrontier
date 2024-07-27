@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "module/cuppr"
+		},
+		{
+			"path": "module/fraction"
+		}
+	],
+	"settings": {}
+}
