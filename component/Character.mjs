@@ -1,16 +1,5 @@
-const job = {
-    brute: {
-        description:
-            
-    },
-    duelist: {
-        description:
-            
-    }
-}
-
 class Job {
-    constructor(alias, description) {
+    constructor(alias = '', description = '') {
         this.alias = alias
         this.description = description
     }
@@ -70,12 +59,17 @@ class Player extends Character {
 }
 
 class Enemy extends Character {
-    constructor(job) {
+    constructor() {
         super()
     }
 }
 
 export {
+    Job,
+    Potioneer,
+    Brute,
+    Duelist,
+    Thaunumerturge,
     Character,
     Player,
     Enemy
