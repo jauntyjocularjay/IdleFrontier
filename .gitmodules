@@ -4,3 +4,6 @@
 [submodule "module/cuppr"]
 	path = module/cuppr
 	url = https://github.com/jauntyjocularjay/cupprchai.git
+[submodule "module/fraction"]
+	path = module/fraction
+	url = https://github.com/jauntyjocularjay/Fractionjs
