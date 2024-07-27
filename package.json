@@ -1,15 +1,29 @@
 {
-  "name": "nodejs",
-  "version": "1.0.0",
-  "description": "",
+  "name": "idlefrontier",
+  "version": "0.0.1",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "npm i && git submodule update --init --recursive",
+    "test": "mocha test --exit"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "jauntyjocularjay",
+  "license": "UNLICENSED",
   "dependencies": {
     "@types/node": "^18.0.6"
-  }
+  },
+  "devDependencies": {
+    "chai": "^5.1.1",
+    "mocha": "^10.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jauntyjocularjay/IdleFrontier.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jauntyjocularjay/IdleFrontier/issues"
+  },
+  "homepage": "https://github.com/jauntyjocularjay/IdleFrontier#readme",
+  "description": ""
 }
