@@ -2,6 +2,7 @@ class Job {
     constructor(alias = '', description = '') {
         this.alias = alias
         this.description = description
+        this.skillLevel = 1
     }
 }
 
