@@ -1,5 +1,41 @@
-class Job {
-    constructor(alias = '', description = '') {
+
+
+class Character {
+    constructor(hp = 10, gp = 1, level = 0) {
+    /** 
+     *  @todo 
+     *  @param { Fraction } hp is health total 
+     *  @param { int } gp is gold, currency 
+     *  @param { int } level is the character's level
+     */
+        this.hp = hp
+        this.gp = gp
+        this.level = level
+    }
+}
+
+class Player extends Character {
+    constructor(hp = 10, gp = 1, level = 0, xp=new Fraction(0,10)) {
+    /**
+     *  @class Player 
+     *  @param { Fraction } hp is health total 
+     *  @param { int } gp is gold, currency
+     *  @param { Fraction } xp is the amount the player has toward the next level */
+
+        super(100, 0, 0)
+        this.xp = xp
+    }
+}
+
+class Job extends Player {
+    constructor(hp = 0, gp = 0, xp = new Fraction(0,10), alias = '', description = '') {
+    /**
+     *  @class job 
+     *  @param { Fraction } hp is health total 
+     *  @param { int } gp is gold, currency
+     *  @param { Fraction } xp is the amount the player has toward the next level */
+
+        super(hp, gp, xp)
         this.alias = alias
         this.description = description
         this.skillLevel = 1
@@ -7,61 +43,73 @@ class Job {
 }
 
 class Potioneer extends Job {
-    constructor() {
-        const description =
-            'A magician specializing in potions and concoctions ' +
-            'which de/buff and damage over time.'
-
-        super('potioneer', description)
+    constructor(hp = 0, gp = 0, xp = new Fraction(0,10)) {
+    /**
+     *  @class Potioneer 
+     *  @param { Fraction } hp is health total 
+     *  @param { int } gp is gold, currency
+     *  @param { Fraction } xp is the amount the player has toward the next level */
+        super(
+            hp = hp,
+            gp = gp,
+            xp = xp,
+            'potioneer', 
+            'A magician specializing in potions and concoctions which de/buff ' + 
+                'and damage over time.'
+        )
     }
 }
 
 class Thaunumerturge extends Job {
-    constructor() {
-        const description =
+    constructor(hp = 0, gp = 0, xp = new Fraction(0,10)) {
+        super(
+            hp = hp,
+            gp = gp,
+            xp = xp,
+            'thaunumerturge',
             'A magician specializing in the mysticism of numbers. ' +
-            'Something between a philosopher, sorcerer, and scientist.'
-        super('thaunumerturge', description)
+                'Something between a philosopher, sorcerer, and scientist.'
+        )
     }
 }
 
 class Brute extends Job {
-    constructor() {
+    constructor(hp = 0, gp = 0, xp = new Fraction(0,10)) {
         const description =
-            'A fighter specializing in unarmed combat and melee ' +
-            'clubs.'
-        super('brute', description)
+        super(
+            hp = hp,
+            gp = gp,
+            xp = xp,
+            'brute',
+            'A fighter specializing in unarmed combat and melee clubs.'
+        )
     }
 }
 
 class Duelist extends Job {
-    constructor() {
-        const description =
+    constructor(hp = 0, gp = 0, xp = new Fraction(0,10)) {
+        super(
+            hp = hp,
+            gp = gp,
+            xp = xp,
+            'duelist', 
             'An opportunistic swordsman relying on speed, evasion, ' +
-            'and accuracy. They frequently come equipped with a ' +
-            'flintlock pistol.'
-        super('Duelist', description)
-    }
-}
-
-class Character {
-    constructor(hp = 10, xp = 1, gp = 1) {
-        this.hp = hp
-        this.xp = xp
-        this.gp = gp
-    }
-}
-
-class Player extends Character {
-    constructor(job) {
-        super(100, 0, 0)
-        this.job = job
+                'and accuracy. They frequently come equipped with a ' +
+                'flintlock pistol.'
+        )
     }
 }
 
 class Enemy extends Character {
-    constructor() {
-        super()
+    constructor(hp = 10, gp = 1, xp) {
+    /**
+     *  @class Enemy
+     *  @param { Fraction } hp is health total 
+     *  @param { int } gp is gold, currency
+     *  @param { Number } xp is the amount the player receives after defeat
+     */
+        super(hp, gp)
+        this.xp = xp
     }
 }
 
