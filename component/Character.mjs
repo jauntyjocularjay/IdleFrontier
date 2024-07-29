@@ -15,7 +15,7 @@ class Character {
 }
 
 class Player extends Character {
-    constructor(hp = 10, gp = 1, level = 0, xp=new Fraction(0,10)) {
+    constructor(hp = 10, gp = 1, level = 0, xp=new Fraction(0,12)) {
     /**
      *  @class Player 
      *  @param { Fraction } hp is health total 
@@ -28,7 +28,7 @@ class Player extends Character {
 }
 
 class Job extends Player {
-    constructor(hp = 0, gp = 0, xp = new Fraction(0,10), alias = '', description = '') {
+    constructor(hp = 0, gp = 0, xp = new Fraction(0,12), alias = '', description = '') {
     /**
      *  @class job 
      *  @param { Fraction } hp is health total 
@@ -43,16 +43,16 @@ class Job extends Player {
 }
 
 class Potioneer extends Job {
-    constructor(hp = 0, gp = 0, xp = new Fraction(0,10)) {
+    constructor(hp = 0, gp = 0, xp = new Fraction(0,12)) {
     /**
      *  @class Potioneer 
      *  @param { Fraction } hp is health total 
      *  @param { int } gp is gold, currency
      *  @param { Fraction } xp is the amount the player has toward the next level */
         super(
-            hp = hp,
-            gp = gp,
-            xp = xp,
+            hp,
+            gp,
+            xp,
             'potioneer', 
             'A magician specializing in potions and concoctions which de/buff ' + 
                 'and damage over time.'
@@ -61,11 +61,11 @@ class Potioneer extends Job {
 }
 
 class Thaunumerturge extends Job {
-    constructor(hp = 0, gp = 0, xp = new Fraction(0,10)) {
+    constructor(hp = 0, gp = 0, xp = new Fraction(0,12)) {
         super(
-            hp = hp,
-            gp = gp,
-            xp = xp,
+            hp,
+            gp,
+            xp,
             'thaunumerturge',
             'A magician specializing in the mysticism of numbers. ' +
                 'Something between a philosopher, sorcerer, and scientist.'
@@ -74,12 +74,12 @@ class Thaunumerturge extends Job {
 }
 
 class Brute extends Job {
-    constructor(hp = 0, gp = 0, xp = new Fraction(0,10)) {
+    constructor(hp = 0, gp = 0, xp = new Fraction(0,12)) {
         const description =
         super(
-            hp = hp,
-            gp = gp,
-            xp = xp,
+            hp,
+            gp,
+            xp,
             'brute',
             'A fighter specializing in unarmed combat and melee clubs.'
         )
@@ -87,11 +87,11 @@ class Brute extends Job {
 }
 
 class Duelist extends Job {
-    constructor(hp = 0, gp = 0, xp = new Fraction(0,10)) {
+    constructor(hp = 0, gp = 0, xp = new Fraction(0,12)) {
         super(
-            hp = hp,
-            gp = gp,
-            xp = xp,
+            hp,
+            gp,
+            xp,
             'duelist', 
             'An opportunistic swordsman relying on speed, evasion, ' +
                 'and accuracy. They frequently come equipped with a ' +

@@ -1,3 +1,4 @@
+import { Fraction } from '../module/fraction/Fraction.mjs'
 import { expects } from '../module/cuppr/Chai.mjs'
 import {
     Job,
@@ -9,6 +10,8 @@ import {
     Player,
     Enemy
 } from '../component/Character.mjs'
+
+
 
 function JobTests() {
     const job1 = new Job()
@@ -30,21 +33,29 @@ function JobTests() {
     describe('Potioneer Tests', () => {
         expects.valueToEql(potioneer.alias, 'potioneer')
         expects.valueToEql(potioneer.skillLevel, 1)
+        expects.valueToEql(potioneer.xp, new Fraction(0,16))
+        expects.valueToEql(potioneer.skillLevel, 1)
     })
 
     describe('Brute Tests', () => {
         expects.valueToEql(brute.alias, 'brute')
         expects.valueToEql(brute.skillLevel, 1)
+        expects.valueToEql(potioneer.xp, new Fraction(0,16))
+        expects.valueToEql(potioneer.skillLevel, 1)
     })
 
     describe('Thaunumerturge Tests', () => {
         expects.valueToEql(thaunumerturge.alias, 'thaunumerturge')
         expects.valueToEql(thaunumerturge.skillLevel, 1)
+        expects.valueToEql(thaunumerturge.xp, new Fraction(0,16))
+        expects.valueToEql(potioneer.skillLevel, 1)
     })
 
     describe('Duelist Tests', () => {
         expects.valueToEql(duelist.alias, 'Duelist')
         expects.valueToEql(duelist.skillLevel, 1)
+        expects.valueToEql(duelist.xp, new Fraction(0,16))
+        expects.valueToEql(potioneer.skillLevel, 1)
     })
 }
 
