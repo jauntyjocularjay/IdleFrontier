@@ -1,4 +1,4 @@
-
+import { Fraction } from '../module/fraction/Fraction.mjs'
 
 class Character {
     constructor(hp = 10, gp = 1, level = 0) {
@@ -15,20 +15,20 @@ class Character {
 }
 
 class Player extends Character {
-    constructor(hp = 10, gp = 1, level = 0, xp=new Fraction(0,12)) {
+    constructor(hp = new Fraction(64,64), gp = 1, level = 0, xp=new Fraction(0,16)) {
     /**
      *  @class Player 
      *  @param { Fraction } hp is health total 
      *  @param { int } gp is gold, currency
      *  @param { Fraction } xp is the amount the player has toward the next level */
 
-        super(100, 0, 0)
+        super(hp, gp, level)
         this.xp = xp
     }
 }
 
 class Job extends Player {
-    constructor(hp = 0, gp = 0, xp = new Fraction(0,12), alias = '', description = '') {
+    constructor(hp = new Fraction(64, 64), gp = 0, xp = new Fraction(0,16), alias = '', description = '') {
     /**
      *  @class job 
      *  @param { Fraction } hp is health total 
@@ -43,7 +43,7 @@ class Job extends Player {
 }
 
 class Potioneer extends Job {
-    constructor(hp = 0, gp = 0, xp = new Fraction(0,12)) {
+    constructor(hp = new Fraction(64, 64), gp = 0, xp = new Fraction(0,16)) {
     /**
      *  @class Potioneer 
      *  @param { Fraction } hp is health total 
@@ -61,7 +61,7 @@ class Potioneer extends Job {
 }
 
 class Thaunumerturge extends Job {
-    constructor(hp = 0, gp = 0, xp = new Fraction(0,12)) {
+    constructor(hp = new Fraction(64, 64), gp = 0, xp = new Fraction(0,16)) {
         super(
             hp,
             gp,
@@ -74,7 +74,7 @@ class Thaunumerturge extends Job {
 }
 
 class Brute extends Job {
-    constructor(hp = 0, gp = 0, xp = new Fraction(0,12)) {
+    constructor(hp = new Fraction(64, 64), gp = 0, xp = new Fraction(0,16)) {
         const description =
         super(
             hp,
@@ -87,7 +87,7 @@ class Brute extends Job {
 }
 
 class Duelist extends Job {
-    constructor(hp = 0, gp = 0, xp = new Fraction(0,12)) {
+    constructor(hp = new Fraction(64, 64), gp = 0, xp = new Fraction(0,16)) {
         super(
             hp,
             gp,

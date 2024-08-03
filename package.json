@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "npm i && git submodule update --init --recursive",
-    "test": "mocha test --exit"
+    "test": "clear && mocha test --exit"
   },
   "keywords": [],
   "author": "jauntyjocularjay",
